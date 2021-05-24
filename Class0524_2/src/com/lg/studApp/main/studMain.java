@@ -1,42 +1,40 @@
 package com.lg.studApp.main;
 
-import java.util.Random;
+//import java.util.Random;
+
+import com.lg.studApp.Util.RandData;
+import com.lg.studApp.model.Student;
+
 
 public class studMain {
 
-	public class RandData{
-		String name[] = {"í™ê¸¸ë™", "ê¹€ê¸¸ë™", "ë°•ê¸¸ë™", "ìµœê¸¸ë™", "ì´ê¸¸ë™"};
-		int age[] = {50, 60, 70, 80, 90};
-		char gender[] = {'ë‚¨', 'ì—¬'};
-		String address[] = {"ëŒ€êµ¬ì‹œ ë™êµ¬ ì‹ ì²­1ë™", "ëŒ€êµ¬ì‹œ ë™êµ¬ ì‹ ì²œ2ë™", "ëŒ€êµ¬ì‹œ ë™êµ¬ ì‹ ì²­3ë™", "ëŒ€êµ¬ì‹œ ë™êµ¬ ì‹ ì²­4ë™", "ëŒ€êµ¬ì‹œ ë™êµ¬ ì‹ ì²œ 5ë™"};
+	public static void main(String[] args) {
+		String name[] = {"È«±æµ¿","ÀÌ¼ø½Å","°­°¨Âù","±èÁÂÁø","±èµÎÈ¯"};
+		int age[] = {50,51,52,53,53};
+		char gender[] = {'³²','¿©'};
+		String address[] = {"´ë±¸½Ã µ¿±¸ ½ÅÃµ1µ¿","´ë±¸½Ã µ¿±¸ ½ÅÃµ2µ¿",
+				"´ë±¸½Ã µ¿±¸ ½ÅÃµ3µ¿","´ë±¸½Ã µ¿±¸ ½ÅÃµ4µ¿",
+				"´ë±¸½Ã µ¿±¸ ½ÅÃµ5µ¿"};
 		
+		Student arr[] = new Student[10];
+//		Random r = new Random();
+		RandData r = new RandData();
 		
-		Random r= new Random();
-		Student[] st = new Student[10];
-		for (int i=0; i<st.length; i++) {
-		st[i] = new Student(name[r.nextInt(5)], age[r.nextInt(5)], gender[r.nextInt(5)], address[r.nextInt(5)]);
-		System.out.println("ë²ˆí˜¸: " + (i+1));
-		st[i].showStInfo();
+		for(int i = 0 ; i < arr.length; i++) {
+			arr[i] = new Student(
+					r.getName(),
+					r.getAge(),
+					r.getGender(),
+					r.getAddress());
+			System.out.println("¹øÈ£: " + (i+1));
+			arr[i].showStInfo();
+		}
+		arr[9] = new Student("Àü¿ìÄ¡",24,'³²',"Á¶¼± ÇÑ¾çÀÎ±Ù µÎ¸Ş»ê°ñ");
+		arr[9].showStInfo();
 		
-	
-	st[9] = new Student("ì „ìš°ì¹˜ ", 24, 'ë‚¨', "ì¡°ì„  í•œì–‘ì¸ê·¼ ë‘ë©”ì‚°ê³¨");
-	st[9].setName("ì „ìš°ì¹˜");
-	st[9].setAge(24);
-	st[9].setGender('ë‚¨');
-	st[9].setAddresss("ì¡°ì„  í•œì–‘ì¸ê·¼ ë‘ë©”ì‚°ê³¨");
-	
-	public String getName() {
-		return name[r.nextInt(5)];
-	}	
-	public int getAge() {
-		return age[r.nextInt(5)];
+
 	}
-	public char getGender() {
-		return gender[r.nextInt(2)];		
-	}
-	
-	public char getAddress() {
-		return address[r.nextInt(5)];
+
 }
-}
-}
+
+

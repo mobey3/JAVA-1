@@ -1,66 +1,73 @@
 package com.lg.studApp.model;
 
 public class Student {
-	
 	private String name;
 	private int age;
-	private char gender;
-	private String adress;
+	private char gender; 
+	private String address;
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	public char getGender() {
-		return gender;
-	}
-
-	public void setGender(char gender) {
-		this.gender = gender;
-	}
-
-	public String getAdress() {
-		return adress;
-	}
-
-	public void setAdress(String adress) {
-		this.adress = adress;
-	}
-
-	public Student(String name, int age, char gender, String adress) {
+	public Student(String name, int age, char gender, String address) {
 		super();
 		this.name = name;
 		this.age = age;
 		this.gender = gender;
-		this.adress = adress;
+		this.address = address;
+	}
+	
+	public Student() {
+		
+	}
+	
+	
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public int getAge() {
+		return age;
+	}
+	
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	public char getGender() {
+		return gender;
+	}
+	
+	public void setGender(char gender) {
+		this.gender = gender;
+	}
+	
+	public String getAddress() {
+		return address;
+	}
+	
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	@Override
 	public String toString() {
-		String str = "ì´ë¦„: " + name + "\n";
-		str += "ì„±ë³„: " + gender + "\n";
-		str += "ë‚˜ì´: " + age + "\n";
-		str += "ì£¼ì†Œ: " + adress + "\n";
+		String str ="ÀÌ¸§: " + name+ "\n";
+		str += "¼ºº°: " + gender + "\n";
+		str += "³ªÀÌ: " + age + "\n";
+		str += "ÁÖ¼Ò: " + address + "\n";
 		return str;
 	}
 	
 	public void showStInfo() {
-		System.out.println("ì´ë¦„: " + name);
-		System.out.println("ì„±ë³„: " + gender);
-		System.out.println("ë‚˜ì´: " + age);
-		System.out.println("ì£¼ì†Œ: " + adress);
+		System.out.println("ÀÌ¸§: " + name);
+		System.out.println("¼ºº°: " + gender);
+		System.out.println("³ªÀÌ: " + age);
+		System.out.println("ÁÖ¼Ò: " + address);
+		System.out.println("------------------");
 	}
+	
 
+	
 }
