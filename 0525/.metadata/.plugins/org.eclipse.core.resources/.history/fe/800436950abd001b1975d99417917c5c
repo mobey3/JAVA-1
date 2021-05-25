@@ -1,0 +1,22 @@
+package kjs.CarApp.view;
+
+import java.util.Scanner;
+
+public class MainMenu {
+	Scanner s = new Scanner(System.in);
+	public int mainMenu() {
+		System.out.println("------------------------");
+		System.out.println("중고차 매매 관리 프로그램 v1.0");
+		System.out.println("------------------------");
+		System.out.println("1.중고차 매매 현황 보기");
+		System.out.println("2.중고차 매매 랜덤 자료 추가");
+		System.out.println("3.중고차 매매 수동 자료 추가");
+		System.out.println("4.프로그램 종료");
+		System.out.println("------------------------");
+		
+		return s.nextInt();
+		
+	}
+	
+
+}

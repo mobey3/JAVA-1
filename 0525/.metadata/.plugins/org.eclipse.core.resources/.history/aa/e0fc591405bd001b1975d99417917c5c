@@ -1,0 +1,25 @@
+package kjs.CarApp.Main;
+
+import kjs.CarApp.Customer.Customer;
+import kjs.CarApp.Customer.RandData;
+import kjs.CarApp.car.Car;
+
+public class CarMain {
+
+		public static void main(String[] args) {
+		Customer[] cu = new Customer[10];
+		RandData r = new RandData();
+		for(int i = 0; i < cu.length; i++) {
+			System.out.println("¹øÈ£: " + (i+1));
+			cu[i] = new Customer(r.getName(),
+					r.getTel(), r.getAddress(),
+					new Car(r.getModel(),
+							r.getColor(),r.getYear(),
+							r.getCompany()));
+			cu[i].printCustomerInfo();		
+		}
+		
+
+	}
+
+}

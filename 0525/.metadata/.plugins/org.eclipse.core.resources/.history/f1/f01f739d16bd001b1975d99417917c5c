@@ -1,0 +1,32 @@
+package kjs.CarApp.Main;
+
+import java.util.ArrayList;
+
+import kjs.CarApp.Customer.Customer;
+import kjs.CarApp.Customer.RandData;
+import kjs.CarApp.car.Car;
+import kjs.CarApp.view.Menu;
+
+public class CarMain {
+	public static void main(String[] args) {
+      Menu m = new Menu();
+	 while (true) {
+			switch (m.mainMenu()) {
+				case Menu.MAIN_MENU_VIEW:
+				    System.out.println("중고차 매매 현황보기");
+				    break;
+				case Menu.MAIN_MENU_RAND_INS:
+				    System.out.println("중고차 매매 랜덤 자료 추가");
+					break;
+				case Menu.MAIN_MENU_INS:
+					System.out.println("중고차 매매 수동 자료 추가");
+					break;
+				case Menu.MAIN_MENU_EXIT:
+					System.out.println("프로그램 종료");
+					break;
+
+	            }
+
+ 	    }
+	}
+}
